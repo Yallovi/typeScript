@@ -28,10 +28,10 @@ var TENTHS_LESS_THAN_HUNDRED: string[] = [
  * @param {boolean} [asOrdinal] - Deprecated, use toWordsOrdinal() instead!
  * @returns {string}
  */
-function toWords(number:number | string, asOrdinal: boolean): string {
+function toWords(number:number | string, asOrdinal?: boolean): string {
     const num = parseInt(number as string, 10);
 
-    if (!isFinite(num)) {
+    if (!isFiniteNumber(num)) {
         throw new TypeError(
             'Not a finite number: ' + number + ' (' + typeof number + ')'
         );
