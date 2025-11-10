@@ -10,7 +10,7 @@ interface Entry<K, V> {
 class MyMap<K, V>  {
 	private buckets: Array<Entry<K, V> | undefined>;
 	private capacity: number;
-	private _size: number;
+	private _size: number = 0;
 	private loadFactor: number;
 
 	// для объектов - уникальный идентификатор
@@ -24,7 +24,7 @@ class MyMap<K, V>  {
 	}
 
 	get size(): number {
-		return this.size
+		return this._size
 	}
 
 	private hashString(s: string): Hash {
@@ -62,7 +62,6 @@ class MyMap<K, V>  {
     if (t === 'undefined') return 0xcafebabe;
 	  
 		return this.hashNumber(this.getObjectId(key));
-
 	}
 
 
@@ -140,6 +139,8 @@ class MyMap<K, V>  {
 				entryValue = entry.value
 				break
 			}
+
+			entry = entry.next
 		}
 
 		return entryValue;
