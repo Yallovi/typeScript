@@ -1,6 +1,6 @@
-type Hash = number;
+export type Hash = number;
 
-interface Entry<K, V> {
+export interface Entry<K, V> {
 	key: K;
 	value: V;
 	hash: Hash;
@@ -131,7 +131,7 @@ class MyMap<K, V>  {
 		const hash = this.getHashForKey(key)
 		const index = this.indexFor(hash)
 
-		const entry = this.buckets[index];
+		let entry = this.buckets[index];
 		let entryValue;
 
 		while(entry) {

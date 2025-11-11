@@ -3,7 +3,7 @@
   "compilerOptions": {
     // File Layout
     // "rootDir": "./src",
-    // "outDir": "./dist",
+    "outDir": "./dist",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
@@ -13,24 +13,31 @@
     "lib": ["esnext"],
     "types": ["node"],
 
+    "rootDir": "./src",
+    "allowJs": false,
+
     // Other Outputs
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    
+    "noEmitOnError": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
     // Style Options
-    "noImplicitAny": false,
-    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false, 
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnreachableCode": true,
+    "noImplicitOverride": true ,
 
     // Recommended Options
     "strict": true,

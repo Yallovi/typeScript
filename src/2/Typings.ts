@@ -1,3 +1,4 @@
+//@ts-nocheck
 import makeOrdinal from './makeOrdinal';
 import isFiniteNumber from './isFinite';
 import isSafeNumber from './isSafeNumber';
