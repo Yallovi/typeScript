@@ -21,7 +21,7 @@
     "declaration": true,
     "declarationMap": true,
     
-    "noEmitOnError": true,
+    // "noEmitOnError": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
